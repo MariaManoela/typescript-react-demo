@@ -17,7 +17,7 @@ function CounterFunction(props : CounterProps) {
 
     return (
         <div>
-            <p>You clicked {count} times</p>
+            <p>Value = {count}</p>
             <button onClick={handleClickIncrement}>Click me to increase count</button>
             <button onClick={handleClickDecrement}>Click me to decrease count</button>
         </div>
