@@ -1,19 +1,24 @@
 import React, {useState} from "react";
 
-function Counter() {
+function CounterFunction() {
     const [count, setCount] = useState(0);
 
-    const handleClick = () => {
+    const increaseCount = () => {
         setCount(count + 1);
         //setCount(currentCount => currentCount + 1);
     };
 
+    const decreaseCount = () => {
+        setCount(count - 1);
+    }
+
     return (
         <div>
             <p>You clicked {count} times</p>
-            <button onClick={handleClick}>Click me</button>
+            <button onClick={increaseCount}>Click me to increase count</button>
+            <button onClick={decreaseCount}>Click me to decrease count</button>
         </div>
     );
 }
 
-export default Counter;
+export default CounterFunction;
