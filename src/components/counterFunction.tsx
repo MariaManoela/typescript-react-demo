@@ -3,20 +3,20 @@ import React, {useState} from "react";
 function CounterFunction() {
     const [count, setCount] = useState(0);
 
-    const increaseCount = () => {
+    const handleClickIncrement = () => {
         setCount(count + 1);
         //setCount(currentCount => currentCount + 1);
     };
 
-    const decreaseCount = () => {
+    const handleClickDecrement = () => {
         setCount(count - 1);
     }
 
     return (
         <div>
             <p>You clicked {count} times</p>
-            <button onClick={increaseCount}>Click me to increase count</button>
-            <button onClick={decreaseCount}>Click me to decrease count</button>
+            <button onClick={handleClickIncrement}>Click me to increase count</button>
+            <button onClick={handleClickDecrement}>Click me to decrease count</button>
         </div>
     );
 }
