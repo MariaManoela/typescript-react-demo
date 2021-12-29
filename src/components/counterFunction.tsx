@@ -1,11 +1,14 @@
 import React, {useState} from "react";
 
-function CounterFunction() {
-    const [count, setCount] = useState(0);
+interface CounterProps {
+    initialValue: number;
+}
+
+function CounterFunction(props : CounterProps) {
+    const [count, setCount] = useState(props.initialValue);
 
     const handleClickIncrement = () => {
         setCount(count + 1);
-        //setCount(currentCount => currentCount + 1);
     };
 
     const handleClickDecrement = () => {
