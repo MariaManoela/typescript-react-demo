@@ -5,7 +5,7 @@ import CounterFunction from './components/counterFunction';
 function App() {
   return (
     <>
-      <CounterFunction/>
+      <CounterFunction initialValue={10} />
     </>
   );
 }
