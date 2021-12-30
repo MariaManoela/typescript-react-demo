@@ -1,12 +1,21 @@
 import React, {useState, useEffect} from "react";
 
 function NameInput() {
-    const [name, setName] = useState('');
+    const [name, setName] = useState(() => {
+        console.log('initia state');
+        return window.localStorage.getItem('name') || '';
+    });
+   
     console.log('rendered');
 
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
         setName(event.target.value);
     };
+
+    useEffect(() => {
+        console.log('effect');
+        window.localStorage.setItem('name', name);
+    });
 
     return (
         <>
